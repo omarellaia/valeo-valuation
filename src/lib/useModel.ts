@@ -5,7 +5,8 @@ import { modelData } from "@/lib/data";
 import { runModel, type ScenarioKey } from "@/lib/model";
 
 const SCEN: ScenarioKey[] = ["bear", "base", "bull"];
-const parse = (x: string | null) => (x === null || x === "" || !isFinite(Number(x)) ? undefined : Number(x) / 100);
+/** Percent in the URL → rate, clamped to the slider range. */
+const parse = (x: string | null, lo: number, hi: number) => (x === null || x === "" || !isFinite(Number(x)) ? undefined : Math.min(hi, Math.max(lo, Number(x))) / 100);
 
 /** Scenario and slider values live in the URL (?s=base&wacc=8.5&g=1.5) so any view can be shared by link. */
 export function useModel() {
@@ -14,8 +15,8 @@ export function useModel() {
   const path = usePathname();
   const s = sp.get("s");
   const scenario: ScenarioKey = SCEN.includes(s as ScenarioKey) ? (s as ScenarioKey) : "base";
-  const wacc = parse(sp.get("wacc"));
-  const g = parse(sp.get("g"));
+  const wacc = parse(sp.get("wacc"), 6, 12);
+  const g = parse(sp.get("g"), 0, 3);
   const out = useMemo(() => runModel(modelData, { scenario, wacc, g }), [scenario, wacc, g]);
   const set = useCallback((patch: Record<string, string | null>) => {
     const next = new URLSearchParams(sp.toString());

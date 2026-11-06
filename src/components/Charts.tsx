@@ -33,7 +33,7 @@ export function FootballField({ rows, price, offer }: { rows: { method: string; 
   const max = Math.ceil(Math.max(...rows.map((r) => r.high), offer) / 5) * 5 + 5;
   return (
     <ResponsiveContainer width="100%" height={60 + rows.length * 44}>
-      <BarChart data={data} layout="vertical" margin={{ top: 18, right: 16, left: 8, bottom: 8 }}>
+      <BarChart data={data} layout="vertical" margin={{ top: 18, right: 16, left: 8, bottom: 8 }} barCategoryGap="28%">
         <CartesianGrid stroke="var(--line)" horizontal={false} />
         <XAxis type="number" domain={[0, max]} tick={{ fill: "var(--muted)", fontSize: 11 }} tickFormatter={(v) => `${v} €`} axisLine={{ stroke: "var(--line)" }} tickLine={false} />
         <YAxis type="category" dataKey="method" width={190} tick={{ fill: "var(--ink)", fontSize: 11 }} axisLine={false} tickLine={false} />
@@ -41,7 +41,7 @@ export function FootballField({ rows, price, offer }: { rows: { method: string; 
         <Bar dataKey="base" stackId="f" fill="transparent" isAnimationActive={false} />
         <Bar dataKey="span" stackId="f" fill="var(--c2)" radius={3} isAnimationActive={false} />
         <ReferenceLine x={price} stroke="var(--ink)" strokeDasharray="4 3" label={{ value: `Cours ${eur(price)}`, position: "top", fill: "var(--ink)", fontSize: 11 }} />
-        <ReferenceLine x={offer} stroke="var(--bad)" strokeDasharray="4 3" label={{ value: `Offre ${eur(offer)}`, position: "insideTopRight", fill: "var(--bad)", fontSize: 11 }} />
+        <ReferenceLine x={offer} stroke="var(--bad)" strokeDasharray="4 3" label={{ value: `Offre ${eur(offer)}`, position: "insideBottomRight", fill: "var(--bad)", fontSize: 11 }} />
       </BarChart>
     </ResponsiveContainer>
   );

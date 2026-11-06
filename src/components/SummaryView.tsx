@@ -1,7 +1,7 @@
 "use client";
 import { useModel } from "@/lib/useModel";
 import { modelData } from "@/lib/data";
-import { date, eur, meur, pct } from "@/lib/format";
+import { date, eur, meur, mult, pct } from "@/lib/format";
 import { ScenarioSwitch } from "./Controls";
 import { FootballField } from "./Charts";
 import { Card, Stat, TableWrap } from "./ui";
@@ -47,7 +47,7 @@ export function SummaryView() {
             <Stat label="VE" value={sel ? meur(sel.ev) : "—"} />
             <Stat label="CMPC / g" value={`${pct(out.w, 2)} / ${pct(out.g, 2)}`} />
             <Stat label="Part VT dans VE" value={sel ? pct(sel.tvShareOfEv, 0) : "—"} sub={sel && sel.tvShareOfEv > 0.75 ? "> 75 % : à commenter" : undefined} />
-            <Stat label="VE/EBITDA implicite VT" value={sel ? `${sel.impliedExitEvEbitda.toFixed(1)}x` : "—"} />
+            <Stat label="VE/EBITDA implicite VT" value={sel ? mult(sel.impliedExitEvEbitda) : "—"} />
           </div>
         </Card>
       </div>
