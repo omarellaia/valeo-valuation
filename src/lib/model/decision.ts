@@ -32,7 +32,8 @@ export function applyDecisionRule(r: DecisionRule, x: DecisionInput): Decision {
   const hurdle = x.price * (1 + r.marginOfSafety);
   const dcfPasses = x.basePerShare >= hurdle;
   const compsPasses = x.compsMid === null ? null : x.compsMid >= hurdle;
-  const bearLoss = Math.max(0, 1 - x.bearPerShare / x.price);
+  // equity is floored at zero for a shareholder: the worst loss is 100 %
+  const bearLoss = Math.min(1, Math.max(0, 1 - Math.max(0, x.bearPerShare) / x.price));
   const bearPasses = bearLoss < r.bearMaxLoss;
   const reasons: string[] = [];
   if (!dcfPasses) reasons.push("base-case DCF below hurdle");
