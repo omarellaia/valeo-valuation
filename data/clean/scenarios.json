@@ -1,0 +1,41 @@
+{
+  "_note": "Copied from model/valeo_model.xlsx sheets DCF_Base, DCF_Up (bull), DCF_Down (bear). Years 2026 (base year, t=0) to 2033 (t=7).",
+  "years": [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033],
+  "scenarios": {
+    "base": {
+      "label": "Base", "description": "Guidance 2026 puis croissance modérée",
+      "sales_2026": 20400,
+      "growth":        [null, 0.015, 0.02, 0.025, 0.025, 0.02, 0.02, 0.015],
+      "ebitda_margin": [0.144, 0.145, 0.146, 0.146, 0.146, 0.146, 0.146, 0.146],
+      "da_pct":        [0.087, 0.087, 0.086, 0.085, 0.085, 0.084, 0.084, 0.084],
+      "restructuring_pct": [0.008, 0.008, 0.008, 0.008, 0.008, 0.008, 0.008, 0.008],
+      "capex_pct":     [0.083, 0.084, 0.084, 0.084, 0.084, 0.084, 0.084, 0.084],
+      "terminal_growth": 0.015
+    },
+    "bull": {
+      "label": "Hausse", "description": "Reprise des volumes, marge d'EBITDA 16%",
+      "sales_2026": 20600,
+      "growth":        [null, 0.03, 0.04, 0.04, 0.03, 0.03, 0.025, 0.02],
+      "ebitda_margin": [0.145, 0.15, 0.154, 0.157, 0.16, 0.16, 0.16, 0.16],
+      "da_pct":        [0.087, 0.086, 0.085, 0.085, 0.085, 0.085, 0.085, 0.085],
+      "restructuring_pct": [0.007, 0.007, 0.007, 0.007, 0.007, 0.007, 0.007, 0.007],
+      "capex_pct":     [0.083, 0.084, 0.084, 0.084, 0.084, 0.084, 0.084, 0.084],
+      "terminal_growth": 0.02
+    },
+    "bear": {
+      "label": "Baisse", "description": "Volumes −5%, marge d'EBITDA 13,5%",
+      "sales_2026": 20300,
+      "growth":        [null, -0.03, -0.01, 0, 0.005, 0.01, 0.01, 0.01],
+      "ebitda_margin": [0.142, 0.138, 0.135, 0.135, 0.135, 0.135, 0.135, 0.135],
+      "da_pct":        [0.087, 0.087, 0.086, 0.086, 0.086, 0.086, 0.086, 0.086],
+      "restructuring_pct": [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01],
+      "capex_pct":     [0.084, 0.086, 0.086, 0.086, 0.086, 0.086, 0.086, 0.086],
+      "terminal_growth": 0.01
+    }
+  },
+  "sensitivity": {
+    "wacc": [0.075, 0.08, 0.085, 0.09, 0.095],
+    "growth": [0.01, 0.0125, 0.015, 0.0175, 0.02],
+    "source": "Synthese!A33:F38 du modèle"
+  }
+}

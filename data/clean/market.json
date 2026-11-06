@@ -1,0 +1,37 @@
+{
+  "valuation_date": "2027-01-01",
+  "inputs": {
+    "risk_free":        { "value": 0.048, "unit": "rate", "label": "Taux sans risque (OAT 10 ans)", "source": "OAT 10 ans < 5% fin oct. 2026 (Trading Economics)", "as_of": "2026-10-31", "analyst_assumption": true },
+    "erp":              { "value": 0.055, "unit": "rate", "label": "Prime de risque marché", "source": "À remplacer par la valeur du cours", "as_of": "2026-10-31", "analyst_assumption": true },
+    "beta_unlevered":   { "value": 0.9,   "unit": "x",    "label": "Bêta désendetté (βu)", "source": "Valeo très cyclique; équivalent à un βL ≈ 1,7 au levier actuel", "as_of": "2026-10-31", "analyst_assumption": true },
+    "cost_of_debt":     { "value": 0.049, "unit": "rate", "label": "Coût de la dette avant IS", "source": "Coupon obligation juin 2026 (4,875%, éch. 2033) — site Valeo", "as_of": "2026-06-30", "analyst_assumption": false },
+    "tax_rate":         { "value": 0.27,  "unit": "rate", "label": "Taux d'IS normatif", "source": "Taux effectif 2025 = 43-45% jugé anormal", "as_of": "2025-12-31", "analyst_assumption": true },
+    "share_price":      { "value": 13.66, "unit": "EUR",  "label": "Cours de l'action", "source": "MarketScreener", "as_of": "2026-10-14", "analyst_assumption": false },
+    "shares_m":         { "value": 240.8, "unit": "m",    "label": "Nombre d'actions", "source": "Capitalisation 3,29 Md€ / 13,66 € (MarketScreener)", "as_of": "2026-10-14", "analyst_assumption": false },
+    "price_52w_low":    { "value": 9.44,  "unit": "EUR",  "label": "Cours bas 52 semaines", "source": "MarketScreener", "as_of": "2026-10-14", "analyst_assumption": false },
+    "price_52w_high":   { "value": 17.32, "unit": "EUR",  "label": "Cours haut 52 semaines", "source": "MarketScreener", "as_of": "2026-10-14", "analyst_assumption": false },
+    "analyst_target":   { "value": 14.54, "unit": "EUR",  "label": "Objectif moyen des analystes (14 analystes)", "source": "MarketScreener", "as_of": "2026-10-14", "analyst_assumption": false }
+  },
+  "bridge": {
+    "net_debt_h1":      { "value": 3828, "unit": "EUR m", "label": "Dette nette au 30/06/2026", "source": "Communiqué H1 2026", "as_of": "2026-06-30", "analyst_assumption": false },
+    "fcf_h2_2026":      { "value": 242,  "unit": "EUR m", "label": "FCF après intérêts H2 2026 (hypothèse)", "source": "Objectif Valeo: H2 ≥ H1 (H1 = 242)", "as_of": "2026-06-30", "analyst_assumption": true },
+    "minorities":       { "value": 750,  "unit": "EUR m", "label": "Intérêts minoritaires (valeur comptable)", "source": "Bilan 31/12/2025", "as_of": "2025-12-31", "analyst_assumption": false },
+    "pensions":         { "value": 746,  "unit": "EUR m", "label": "Provisions pour retraites (nettes)", "source": "Notes 6.2-6.3, 31/12/2025", "as_of": "2025-12-31", "analyst_assumption": false },
+    "factoring":        { "value": 322,  "unit": "EUR m", "label": "Créances cédées (affacturage)", "source": "Note 5.2, 31/12/2025", "as_of": "2025-12-31", "analyst_assumption": false },
+    "net_interest":     { "value": 218,  "unit": "EUR m", "label": "Frais financiers nets (mémo)", "source": "FCF 2025: intérêts financiers nets", "as_of": "2025-12-31", "analyst_assumption": false }
+  },
+  "operating": {
+    "sales_2025":       { "value": 20903,  "unit": "EUR m", "label": "CA 2025 (réel)", "source": "Communiqué FY2025", "as_of": "2025-12-31", "analyst_assumption": false },
+    "nwc_pct_sales":    { "value": -0.013, "unit": "rate",  "label": "BFR en % du CA (négatif)", "source": "(280)/20 903: créances+stocks−dettes fournisseurs 2025", "as_of": "2025-12-31", "analyst_assumption": false },
+    "lease_pct_sales":  { "value": 0.0075, "unit": "rate",  "label": "Loyers IFRS 16 (principal) en % du CA", "source": "152/20 903 en 2025", "as_of": "2025-12-31", "analyst_assumption": false }
+  },
+  "cross_checks": {
+    "exit_multiple":       { "value": 3,    "unit": "x",    "label": "Multiple de sortie VE/EBITDA (cross-check)", "source": "Proche du multiple actuel (≈2,9x)", "as_of": "2026-10-14", "analyst_assumption": true },
+    "exit_multiple_high":  { "value": 3.5,  "unit": "x",    "label": "Multiple de sortie haut (football field)", "source": "Synthese!B30 du modèle", "as_of": "2026-10-14", "analyst_assumption": true },
+    "control_premium":     { "value": 0.3,  "unit": "rate", "label": "Prime de contrôle de l'offre", "source": "Fourchette du guide: 20-35%", "as_of": "2026-10-31", "analyst_assumption": true },
+    "premium_low":         { "value": 0.2,  "unit": "rate", "label": "Prime d'offre basse", "source": "Synthese!B11 du modèle", "as_of": "2026-10-31", "analyst_assumption": true },
+    "premium_high":        { "value": 0.4,  "unit": "rate", "label": "Prime d'offre haute", "source": "Synthese!B13 du modèle", "as_of": "2026-10-31", "analyst_assumption": true },
+    "wacc_iterations":     { "value": 8,    "unit": "n",    "label": "Itérations du CMPC", "source": "WACC!A19:A27 du modèle", "as_of": "2026-10-31", "analyst_assumption": false }
+  },
+  "probabilities": { "bear": 0.25, "base": 0.5, "bull": 0.25, "source": "Hypothèse de l'analyste (Hypotheses!B20:B22)" }
+}

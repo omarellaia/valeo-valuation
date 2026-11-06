@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "item": "EBITDA ajusté",
+      "amount": 3082.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Investissements immobilisations incorporelles",
+      "amount": -971.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Investissements corporels",
+      "amount": -790.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Impôt décaissé",
+      "amount": -287.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Loyers IFRS 16 (principal)",
+      "amount": -152.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Variation du BFR",
+      "amount": -301.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Autres",
+      "amount": 175.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Restructuration (décaissé)",
+      "amount": -167.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    {
+      "item": "Intérêts financiers nets",
+      "amount": -218.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    }
+  ],
+  "checks": {
+    "fcf_before_restructuring": {
+      "published": 756.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    },
+    "fcf_after_interest": {
+      "published": 371.0,
+      "source": "Valeo FY2025 results release",
+      "page": 10.0
+    }
+  }
+}

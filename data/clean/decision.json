@@ -1,0 +1,7 @@
+{
+  "_status": "DEFAULTS FROM THE SPEC TEMPLATE — confirm or change before results are read (section 6, decision rule).",
+  "margin_of_safety": 0.15,
+  "bear_max_loss": 0.30,
+  "reference_price": "offer",
+  "_reference_price_note": "'offer' = market price × (1 + control premium), as in the workbook's Synthese sheet (buy-side acquisition framing). Use 'market' to compare with the share price alone."
+}

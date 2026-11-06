@@ -1,0 +1,76 @@
+{
+  "periods": [
+    "2023",
+    "2024",
+    "2025",
+    "H1_2026"
+  ],
+  "metrics": {
+    "sales": {
+      "unit": "EUR m",
+      "source": "Valeo FY2023, FY2024, FY2025 and H1 2026 results releases",
+      "page": null,
+      "values": {
+        "2023": 22044.0,
+        "2024": 21492.0,
+        "2025": 20903.0,
+        "H1_2026": 10378.0
+      }
+    },
+    "ebitda_adj": {
+      "unit": "EUR m",
+      "source": "Valeo FY2023, FY2024, FY2025 and H1 2026 results releases",
+      "page": null,
+      "values": {
+        "2023": 2647.0,
+        "2024": 2863.0,
+        "2025": 3082.0,
+        "H1_2026": 1492.0
+      }
+    },
+    "operating_margin": {
+      "unit": "EUR m",
+      "source": "Valeo results releases (Valeo's own definition of operating margin)",
+      "page": null,
+      "values": {
+        "2023": 838.0,
+        "2024": 919.0,
+        "2025": 977.0,
+        "H1_2026": 514.0
+      }
+    },
+    "operating_income": {
+      "unit": "EUR m",
+      "source": "Valeo results releases",
+      "page": null,
+      "values": {
+        "2023": 744.0,
+        "2024": 618.0,
+        "2025": 789.0,
+        "H1_2026": 428.0
+      }
+    },
+    "net_income_group": {
+      "unit": "EUR m",
+      "source": "Valeo results releases",
+      "page": null,
+      "values": {
+        "2023": 221.0,
+        "2024": 162.0,
+        "2025": 200.0,
+        "H1_2026": 105.0
+      }
+    },
+    "net_financial_debt": {
+      "unit": "EUR m",
+      "source": "Valeo results releases (period end)",
+      "page": null,
+      "values": {
+        "2023": 4028.0,
+        "2024": 3813.0,
+        "2025": 4022.0,
+        "H1_2026": 3828.0
+      }
+    }
+  }
+}
